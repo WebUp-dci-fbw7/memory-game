@@ -8,6 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import withStyles from "@material-ui/core/styles/withStyles";
 import InputFiled from "../common/input/input";
 import "./signin.css";
+const axios = require('axios');
 
 const styles = theme => ({
   layout: {
@@ -43,6 +44,44 @@ const styles = theme => ({
 });
 
 class Signin extends Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+  			email: '',
+        password: ''
+
+  		};
+
+      this.handleEmailChange = this.handleEmailChange.bind(this);
+  		this.handlePasswordChange = this.handlePasswordChange.bind(this);
+      this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleEmailChange(event) {
+      this.setState(
+  			{email: event.target.value}
+  		);
+    }
+
+  	handlePasswordChange(event) {
+  		this.setState(
+  			{password: event.target.value}
+  		);
+  	}
+
+  	  handleClick(event) {
+  			event.preventDefault();
+        console.log(this.state);
+  			// axios.post('https://memory-game-7.herokuapp.com/user/login', this.state).then(console.log(this.state.email))
+        //
+   	 	  // .then(function (response) {
+        //   localStorage.setItem('token', JSON.stringify(response.data));
+   	 	  // })
+   	 	  // .catch(function (error) {
+   	 	  //   console.log(error);
+   	 	  // });
+  	  }
+
   render() {
     const { classes } = this.props;
     return (
@@ -56,8 +95,8 @@ class Signin extends Component {
             <Typography variant="headline">Sign in</Typography>
 
             <form className={classes.form}>
-              <InputFiled fullWidth type="email" label="Email" required />
-              <InputFiled fullWidth type="password" label="Password" required />
+              <InputFiled fullWidth type="email" label="Email" value={this.state.email} onChange={this.handleEmailChange} required />
+              <InputFiled fullWidth type="password" label="Password" value={this.state.password} onChange={this.handlePasswordChange} required />
               <button
                 style={{
                   background: "none",
@@ -67,6 +106,7 @@ class Signin extends Component {
                 }}
               >
                 <Button
+                  onClick={this.handleClick}
                   fullWidth
                   className={classes.submit}
                   variant="contained"

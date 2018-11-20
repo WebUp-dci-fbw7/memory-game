@@ -50,13 +50,15 @@ class Signup extends Component {
       this.state = {
   			username: '',
         email: '',
-  			password: ''
+  			password: '',
+        passwordConf: ''
 
   		};
 
       this.handleUsernameChange = this.handleUsernameChange.bind(this);
       this.handleEmailChange = this.handleEmailChange.bind(this);
   		this.handlePasswordChange = this.handlePasswordChange.bind(this);
+      this.handlePasswordConf = this.handlePasswordConf.bind(this);
       this.handleClick = this.handleClick.bind(this);
     }
 
@@ -77,9 +79,13 @@ class Signup extends Component {
   			{password: event.target.value}
   		);
   	}
+    handlePasswordConf(event) {
+  		this.setState(
+  			{passwordConf: event.target.value}
+  		);
+  	}
   	  handleClick(event) {
   			event.preventDefault();
-        console.log(this.state)
   			axios.post('https://memory-game-7.herokuapp.com/user/signup', this.state).then(console.log(this.state.username))
 
    	 	  .then(function (response) {
@@ -107,7 +113,7 @@ class Signup extends Component {
               <InputFiled fullWidth  label="User Name" value={this.state.username} onChange={this.handleUsernameChange} required />
               <InputFiled fullWidth type="email" label="Email" value={this.state.email} onChange={this.handleEmailChange} required />
               <InputFiled fullWidth type="password" label="Password" value={this.state.password} onChange={this.handlePasswordChange} required />
-              <InputFiled fullWidth type="password" label="Confirm Password" required />
+              <InputFiled fullWidth type="password" label="Confirm Password" value={this.state.passwordConf} onChange={this.handlePasswordConf} required />
               <button
                 style={{
                   background: "none",
