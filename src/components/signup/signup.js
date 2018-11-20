@@ -8,6 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import withStyles from "@material-ui/core/styles/withStyles";
 import InputFiled from "../common/input/input";
 import "./signup.css";
+const axios = require('axios');
 
 const styles = theme => ({
   layout: {
@@ -43,6 +44,53 @@ const styles = theme => ({
 });
 
 class Signup extends Component {
+
+  constructor(props) {
+      super(props);
+      this.state = {
+  			username: '',
+        email: '',
+  			password: ''
+
+  		};
+
+      this.handleUsernameChange = this.handleUsernameChange.bind(this);
+      this.handleEmailChange = this.handleEmailChange.bind(this);
+  		this.handlePasswordChange = this.handlePasswordChange.bind(this);
+      this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleUsernameChange(event) {
+      this.setState(
+  			{username: event.target.value}
+  		);
+    }
+
+    handleEmailChange(event) {
+  		this.setState(
+  			{email: event.target.value}
+  		);
+  	}
+
+  	handlePasswordChange(event) {
+  		this.setState(
+  			{password: event.target.value}
+  		);
+  	}
+  	  handleClick(event) {
+  			event.preventDefault();
+        console.log(this.state)
+  			axios.post('https://memory-game-7.herokuapp.com/user/signup', this.state).then(console.log(this.state.username))
+
+   	 	  .then(function (response) {
+          localStorage.setItem('token', JSON.stringify(response.data));
+   	 	  })
+   	 	  .catch(function (error) {
+   	 	    console.log(error);
+   	 	  });
+  	  }
+
+
   render() {
     const { classes } = this.props;
     return (
@@ -56,9 +104,9 @@ class Signup extends Component {
             <Typography variant="headline">Sign up</Typography>
 
             <form className={classes.form}>
-              <InputFiled fullWidth  label="User Name" required />
-              <InputFiled fullWidth type="email" label="Email" required />
-              <InputFiled fullWidth type="password" label="Password" required />
+              <InputFiled fullWidth  label="User Name" value={this.state.username} onChange={this.handleUsernameChange} required />
+              <InputFiled fullWidth type="email" label="Email" value={this.state.email} onChange={this.handleEmailChange} required />
+              <InputFiled fullWidth type="password" label="Password" value={this.state.password} onChange={this.handlePasswordChange} required />
               <InputFiled fullWidth type="password" label="Confirm Password" required />
               <button
                 style={{
@@ -69,6 +117,7 @@ class Signup extends Component {
                 }}
               >
                 <Button
+                  onClick={this.handleClick}
                   fullWidth
                   className={classes.submit}
                   variant="contained"
@@ -86,4 +135,3 @@ class Signup extends Component {
 }
 
 export default withStyles(styles)(Signup);
-
