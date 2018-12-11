@@ -546,7 +546,7 @@ class StartGame extends Component {
                 height: "10vh",
                 width: "35vw",
                 margin: "5vh auto",
-                fontSize: "35px",
+                fontSize: "17px",
                 padding: "10px"
               }}
               data-wow-duration="3s"
