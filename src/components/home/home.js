@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "./home.css";
-import homer from "../../assets/homer.jpg";
+// import homer from "../../assets/homer.jpg";
 import * as actions from "../../store/actions";
 import { connect } from "react-redux";
 import { withRouter, Link } from "react-router-dom";
 import WOW from "wowjs";
+
 class Home extends Component {
   componentDidMount() {
     const wow = new WOW.WOW();
@@ -15,7 +16,9 @@ class Home extends Component {
 
       <div className="Home bg-overlay container-fluid disappear">
         <div className="m-auto">
-          <h1>How good is your memory ???</h1>
+          <div class="headline-home">
+              <h1>Create Your Memory Game</h1>                              <p class="text-home">Upload your own images with just a few clicks and invite your friends to play !!!</p>
+            </div>
 
           <a
             href="/game"
@@ -34,14 +37,8 @@ class Home extends Component {
             <i class="fas fa-hammer mr-2" />
             Create Your Game
           </a>
-          <h2>Create your own interactive memory game</h2>
-          <ul className="ulist">
-            <li>upload your own images with just a few clicks</li>
 
-            <li>invite your friends to play</li>
-          </ul>
 
-          <p>Give it a try push START</p>
         </div>
       </div>
     );

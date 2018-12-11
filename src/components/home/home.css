@@ -1,3 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css?family=Fredoka+One'); */
+
 @media (min-width: 480px) and (max-width: 768px) {
 	.button-style {
 		height: 12vh;
@@ -9,6 +11,9 @@
 	}
 	.toosmall {
 		display: none;
+	}
+	.m-auto .headline-home {
+		width: 80vw;
 	}
 }
 
@@ -36,22 +41,31 @@
 		margin: 5vh 5vw;
 		color: black;
 	}
-	.smallbg {
-		background-color: black;
-	}
 }
 
-/*
-.button-style {
-	height: 12vh;
-	width: 35vw;
-	margin: 5vh auto;
-	font-size: 35px;
-	padding: 10px;
-} */
+.btn-primary {
+	color: #fff;
+	background-color: rgba(60, 179, 113, 0.8);
+	border-color: #007bff;
+}
+
+.btn-danger {
+	color: #fff;
+	background-color: rgba(100, 29.8, 48.6, 0.8);
+	border-color: #dc3545;
+}
+
+.headline-home {
+	color: rgb(50, 50, 50);
+	background-color: rgba(255, 176, 51, 0.8);
+	border-color: #dc3545;
+	width: 60vw;
+	margin: auto;
+	font-family: 'Fredoka One', cursive;
+}
 
 .bg-overlay {
-	background: radial-gradient( rgba(119, 119, 119, 0.5), rgba(0, 100, 0, 0.7), rgba(0, 0, 100, 0.9)), url("../../assets/mem-home.gif");
+	background: linear-gradient( rgba(119, 119, 119, 0.2), rgba(29.8, 88.6, 100, 0.4), rgba(0, 0, 100, 0.2)), url("../../assets/mem-cards.gif");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center center;
@@ -60,12 +74,12 @@
 	padding-top: 50px;
 }
 
-.ulist {
+.text-home {
 	font-size: 2rem;
 	padding-top: 1rem;
 }
 
-header {
+/* header {
 	position: relative;
 	background-color: black;
 	height: 75vh;
@@ -103,11 +117,11 @@ header .overlay {
 	background-color: black;
 	opacity: 0.5;
 	z-index: 1;
-}
+} */
 
-.Home .ulist li {
+/* .Home .ulist li {
 	list-style: none;
-}
+} */
 
 @media (pointer: coarse) and (hover: none) {
 	header {
