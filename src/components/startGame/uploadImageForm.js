@@ -1,4 +1,9 @@
 import React, { Component, Fragment } from "react";
+import Checkbox from "./checkbox";
+import WOW from "wowjs";
+import Drop from "../../assets/drop.mp3";
+
+import ReactAudioPlayer from "react-audio-player";
 
 class UploadImageForm extends Component {
   constructor(props) {
@@ -9,6 +14,12 @@ class UploadImageForm extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleReset = this.handleReset.bind(this);
+  }
+
+  componentDidMount() {
+    const wow = new WOW.WOW();
+
+    wow.init();
   }
   handleChange(event) {
     this.setState({
@@ -25,14 +36,29 @@ class UploadImageForm extends Component {
   render() {
     return (
       <Fragment>
-        <div class="row container">
+        {/* <Checkbox /> */}
+
+        <div class="row container justify-content-center">
           {this.props.imgData.map((item, i) => (
-            <div key={i} class="col-md-3 col-sm-4 col-6 mb-4">
-              <div class="card" style={{ width: "15rem" }}>
+            <div key={i} class={`col-md-3 col-sm-4 col-6 mb-4 wow  bounceIn`}>
+              <ReactAudioPlayer src={Drop} autoPlay />
+              <div
+                class="card"
+                style={{
+                  width: "200px",
+                  height: item.filedata ? "200px" : "75px"
+                }}
+              >
                 {item.imgUrl && (
                   <img
-                    style={{ width: "100%", height: "100%" }}
+                    className="wow bounceIn"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "inherit"
+                    }}
                     src={item.imgUrl}
+                    alt=""
                   />
                 )}
                 <div class="card-body">

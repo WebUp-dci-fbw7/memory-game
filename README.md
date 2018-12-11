@@ -1,17 +1,23 @@
 ## Memory Game (MERN full stack app)
 
+#### The backend repository
+[The backend repository on github](https://github.com/Bierwurst/memory-game-backend-juergen)
 
 
 ![Screenshot](src/assets/mem-home.gif)
 
+![Screenshot](wireframe.jpg)
+### Our Wireframe 
+
 
 > A memory game. Find 2 matching cards. You can play the default version, or create your personal game by uploading your own images.
 
+> This is a group final project which was undertaken as part of the requirement for the completion of a 12 months Web Development course at the Digital Career Institute, Berlin. 
 
 
 ## See it live
 
-[MERN al-developer-back-front live on heroku](https://al-developer.herokuapp.com/)
+[Memory Game live on firebase platform](https://memory-game-fb235.firebaseapp.com/)
 
 ## Quick Start
 
@@ -37,10 +43,25 @@ npm run client
 
 ## App Info
 
-### Author
+### Team Members
 
-Ghassan Aldarwish
-[my website](http://ghassanaldarwish.de/)
+
+
+
+Jürgen Schuler Web Developer
+[juergens-website](https://bierwurst.github.io/)
+[juergens-github account](https://github.com/Bierwurst)
+
+Ghassan Aldarwish Full Stack Web Developer
+[Ghassan's website](http://ghassanaldarwish.de/)
+[Ghassan's-github account](https://github.com/Ghassanooooo)
+
+Isaac Giwa Web Developer
+[Isaac's-github account](https://github.com/MrHezekiah)
+
+
+
+
 
 ### Version
 
