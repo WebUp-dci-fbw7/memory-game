@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import * as actions from "../../store/actions";
 import { connect } from "react-redux";
 import { withRouter, Link } from "react-router-dom";
+import "./register.css";
 import WOW from "wowjs";
 
 class Register extends Component {
@@ -12,7 +13,7 @@ class Register extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="container disappear">
         <h1
           style={{
             padding: "30px"

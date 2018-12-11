@@ -33,7 +33,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Fragment className="disappear">
+
         <Navigation />
+        <div className="toosmall center-content">Sorry your display size is not not supported, too small</div>
         <Route
           render={({ location }) => (
             <TransitionGroup>
@@ -59,6 +62,7 @@ class App extends Component {
             </TransitionGroup>
           )}
         />
+        </Fragment>
       </div>
     );
   }

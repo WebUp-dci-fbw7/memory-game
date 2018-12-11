@@ -74,7 +74,7 @@ class ScoreBoard extends Component {
 
         <div
           className={
-            this.props.isStarting ? "scoreBoard--active" : "scoreBoard"
+            this.props.isStarting ? "scoreBoard--active disappear" : "scoreBoard disappear"
           }
         >
           {loadingPage}

@@ -74,7 +74,7 @@ class ProfilePicture extends Component {
 
     console.log(this.props.user && this.props.user.username);
     return (
-      <div className="wrapper">
+      <div className="wrapper disappear">
         {this.state.loading ? (
           <Spinner />
         ) : (

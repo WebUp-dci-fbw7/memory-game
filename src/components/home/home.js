@@ -12,35 +12,24 @@ class Home extends Component {
   }
   render() {
     return (
-      <div className="Home bg-overlay container-fluid ">
+
+      <div className="Home bg-overlay container-fluid disappear">
         <div className="m-auto">
           <h1>How good is your memory ???</h1>
 
           <a
             href="/game"
             type="button"
-            className="wow bounceInLeft btn btn-primary btn-lg btn-block "
-            style={{
-              height: "12vh",
-              width: "35vw",
-              margin: "5vh auto",
-              fontSize: "35px",
-              padding: "10px"
-            }}
+            className="wow bounceInLeft btn btn-primary btn-lg btn-block button-style"
+
           >
             <i class="fas fa-gamepad mr-2" /> Play Now
           </a>
           <a
             href="/startGame"
             type="button"
-            className="wow bounceInRight btn btn-danger btn-lg btn-block"
-            style={{
-              height: "12vh",
-              width: "35vw",
-              margin: "5vh auto",
-              fontSize: "35px",
-              padding: "10px"
-            }}
+            className="wow bounceInRight btn btn-danger btn-lg btn-block button-style"
+
           >
             <i class="fas fa-hammer mr-2" />
             Create Your Game
