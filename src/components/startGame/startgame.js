@@ -292,14 +292,14 @@ class StartGame extends Component {
                       <div className="row justify-content-center">
                         {this.props.gameImgsData.imgsGame.map(items => (
                           <div
-                            style={{ width: "150px", height: "150px" }}
-                            className="col-3 mb-3"
+
+                            className="col-lg-3 col-sm-6 col-12 mb-3"
                             key={items._id}
                           >
                             <div class="card">
                               <img
                                 style={{
-                                  height: "100%",
+                                  // height: "100%",
                                   borderRadius: "inherit"
                                 }}
                                 className="card-img-top"
@@ -320,7 +320,7 @@ class StartGame extends Component {
                           </label>
                           <button
                             type="button"
-                            class="btn btn-info mb-3"
+                            class="btn btn-info mb-3 adjust"
                             data-toggle="modal"
                             data-target="#exampleModalCenter"
                           >
@@ -443,7 +443,7 @@ class StartGame extends Component {
                             to={`/game-custom/${this.props.user.username}/${
                               this.props.gameImgsData.user
                             }`}
-                            className="wow zoomIn btn btn-outline-danger btn-lg btn-block "
+                            className="wow zoomIn btn btn-outline-danger btn-lg btn-block adj-link"
                             style={{
                               height: "12vh",
                               width: "100%",
@@ -452,11 +452,14 @@ class StartGame extends Component {
                               padding: "10px"
                             }}
                           >
-                            PLAY NOW
-                            <i
-                              class="fas fa-play ml-3 "
-                              style={{ color: "#6E4A84" }}
-                            />
+                              <div className="playnow">
+                                PLAY NOW
+                                <i
+                                  class="fas fa-play ml-3 "
+                                  style={{ color: "#6E4A84" }}
+                                />
+                              </div>
+
                           </Link>
                         </div>
                       </div>

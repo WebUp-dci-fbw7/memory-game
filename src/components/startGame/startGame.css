@@ -1,9 +1,29 @@
-.isaac {
-	background-color: lightskyblue;
-}
-
-@media (min-width: 0px) and (max-width: 480px) {
-	.disappear {
-		display: none;
+@media (min-width: 480px) and (max-width: 768px) {
+	.adjust {
+		font-size: 0.9rem;
+	}
+	.fa-size {
+		font-size: 26px;
 	}
 }
+
+.playnow {
+	font-size: 1rem;
+	margin-top: 2rem;
+}
+
+/* .center-content1 {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -350%)
+} */
+
+/*
+@media (min-width: 480px) and (max-width: 768px) {
+	.btn-lg .adj-link {
+		font-size: 1.2rem;
+	}
+} */
