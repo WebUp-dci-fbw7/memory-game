@@ -271,7 +271,7 @@ class StartGame extends Component {
       this.state.loading ? (
         <Spinner />
       ) : (
-        <div className="container ">
+        <div className="container disappear">
           <ReactAudioPlayer src={createGameMusic} autoPlay loop volume={0.1} />
 
           {this.props.loading ? (
