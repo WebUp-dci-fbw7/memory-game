@@ -226,8 +226,8 @@ class StartGame extends Component {
       email: this.state.email,
 
       url: `https://memory-game-fb235.firebaseapp.com/game-custom/${
-        this.props.user.username
-      }/${this.props.gameImgsData.user}`,
+        this.props.gameImgsData.gamesize
+      }/${this.props.user.username}/${this.props.gameImgsData.user}`,
       name: this.props.user.username
     };
 
