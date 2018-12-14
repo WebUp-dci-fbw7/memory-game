@@ -40,12 +40,12 @@ class UploadImageForm extends Component {
 
         <div class="row container justify-content-center">
           {this.props.imgData.map((item, i) => (
-            <div key={i} class={`col-md-3 col-sm-4 col-6 mb-4 wow  bounceIn`}>
+            <div key={i} class={`col-md-3 col-sm-6 col-6 mb-4 wow  bounceIn`}>
               <ReactAudioPlayer src={Drop} autoPlay />
               <div
                 class="cardInputImgs"
                 style={{
-                  width: "200px",
+                  width: "15vw",
                   height: item.filedata ? "200px" : "75px"
                 }}
               >
@@ -61,7 +61,7 @@ class UploadImageForm extends Component {
                     alt=""
                   />
                 )}
-                <div class="card-body">
+                <div class="card-body cardInput">
                   <input
                     style={{ width: "100%", height: "100%" }}
                     name={item.name}
