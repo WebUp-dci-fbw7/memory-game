@@ -124,7 +124,7 @@ class GameBoard extends Component {
 
     return (
       <div className={gameBoardComplete}>
-        <div className="cardsWrapper">{cardsList}</div>
+        <div className="cardsWrapper disappear">{cardsList}</div>
         <div className="gameBoardBack" />
       </div>
     );

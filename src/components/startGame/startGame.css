@@ -1,3 +1,45 @@
-.isaac{
-    background-color: lightskyblue;
+@media (min-width: 480px) and (max-width: 768px) {
+	.adjust {
+		font-size: 0.8rem;
+	}
+	.fa-size {
+		font-size: 26px;
+	}
 }
+
+.playnow {
+	font-size: 1rem;
+	margin-top: 2rem;
+}
+
+.smallcopy {
+	color: #FFF;
+	background-color: #17a2b8;
+	/* border-color: #dc3545; */
+	border-radius: 10%;
+}
+
+.backstyle {
+	background-color: rgb(218, 247, 166);
+}
+
+.onepxborder {
+	border: 1px solid #8C8E90;
+	margin-bottom: 5px;
+}
+
+/* .center-content1 {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -350%)
+} */
+
+/*
+@media (min-width: 480px) and (max-width: 768px) {
+	.btn-lg .adj-link {
+		font-size: 1.2rem;
+	}
+} */

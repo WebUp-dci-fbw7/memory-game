@@ -6,6 +6,7 @@ import LockIcon from "@material-ui/icons/LockOutlined";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import withStyles from "@material-ui/core/styles/withStyles";
+// import withWidth from '@material-ui/core/withWidth';
 import InputFiled from "../common/input/input";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
@@ -23,8 +24,20 @@ const styles = theme => ({
       width: 400,
       marginLeft: "auto",
       marginRight: "auto"
+    },
+    [theme.breakpoints.down('480')]: {
+      display:'none'
     }
   },
+  // disappear: {
+  //   backgroundColor: 'blue',
+  //   // Match [0, md + 1[
+  //   //       [0, lg[
+  //   //       [0, 1280px[
+  //   [theme.breakpoints.down('md')]: {
+  //     backgroundColor: 'red',
+  //   },
+  // },
   paper: {
     marginTop: theme.spacing.unit * 8,
     display: "flex",
@@ -75,9 +88,9 @@ class Signin extends Component {
       );
     }
     return (
-      <Fragment>
+      <Fragment className={classes.disappear}>
         <CssBaseline />
-        <div className={classes.layout}>
+        <div className={classes.layout} >
           <Paper className={classes.paper}>
             <Avatar className={classes.avatar}>
               <LockIcon />

@@ -24,6 +24,9 @@ const styles = theme => ({
       width: 400,
       marginLeft: "auto",
       marginRight: "auto"
+    },
+    [theme.breakpoints.down('480')]: {
+      display:'none'
     }
   },
   paper: {

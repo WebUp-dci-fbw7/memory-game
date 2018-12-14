@@ -51,7 +51,7 @@ class ProfilePicture extends Component {
     this.setState({ loading: true });
     axios({
       url:
-        /*"https://memory-game-7.herokuapp.com*/"/user/avatar/" + this.props.user.id,
+        "https://memory-game-7.herokuapp.com/user/avatar/" + this.props.user.id,
       method: "POST",
       headers: {
         "Content-Type": "multipart/form-data"
@@ -74,7 +74,7 @@ class ProfilePicture extends Component {
 
     console.log(this.props.user && this.props.user.username);
     return (
-      <div className="wrapper">
+      <div className="wrapper disappear">
         {this.state.loading ? (
           <Spinner />
         ) : (
