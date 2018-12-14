@@ -226,8 +226,8 @@ class StartGame extends Component {
       email: this.state.email,
 
       url: `https://memory-game-fb235.firebaseapp.com/game-custom/${
-        this.props.user.username
-      }/${this.props.gameImgsData.user}`,
+        this.props.gameImgsData.gamesize
+      }/${this.props.user.username}/${this.props.gameImgsData.user}`,
       name: this.props.user.username
     };
 
@@ -423,8 +423,10 @@ class StartGame extends Component {
                             }}
                             id="blob-path"
                             value={`https://memory-game-fb235.firebaseapp.com/game-custom/${
-                              this.props.user.username
-                            }/${this.props.gameImgsData.user}`}
+                              this.props.gameImgsData.gamesize
+                            }/${this.props.user.username}/${
+                              this.props.gameImgsData.user
+                            }`}
                             disabled
                           />
                           <clipboard-copy
@@ -444,7 +446,9 @@ class StartGame extends Component {
                         <div className="col">
 
                           <Link
-                            to={`/game-custom/${this.props.user.username}/${
+                            to={`/game-custom/${
+                              this.props.gameImgsData.gamesize
+                            }/${this.props.user.username}/${
                               this.props.gameImgsData.user
                             }`}
                             className="wow zoomIn btn btn-outline-secondary btn-lg btn-block adj-link"
