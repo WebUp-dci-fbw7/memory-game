@@ -43,7 +43,7 @@ class UploadImageForm extends Component {
             <div key={i} class={`col-md-3 col-sm-4 col-6 mb-4 wow  bounceIn`}>
               <ReactAudioPlayer src={Drop} autoPlay />
               <div
-                class="card"
+                class="cardInputImgs"
                 style={{
                   width: "200px",
                   height: item.filedata ? "200px" : "75px"

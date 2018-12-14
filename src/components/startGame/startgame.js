@@ -285,7 +285,7 @@ class StartGame extends Component {
                     padding: "20px",
                     border: "1px solid #ccc",
                     borderRadius: "10px",
-                    backgroundColor: "rgb(218, 247, 166)",
+                    backgroundColor: "rgb(218, 247, 166)"
                   }}
                 >
                   <div className="row">
@@ -293,11 +293,17 @@ class StartGame extends Component {
                       <div className="row justify-content-center">
                         {this.props.gameImgsData.imgsGame.map(items => (
                           <div
-
                             className="col-lg-3 col-sm-6 col-12 mb-3"
                             key={items._id}
                           >
-                            <div class="card">
+                            <div
+                              style={{
+                                position: "relative",
+                                display: "inline-block",
+
+                                width: "120px"
+                              }}
+                            >
                               <img
                                 style={{
                                   // height: "100%",
@@ -315,20 +321,20 @@ class StartGame extends Component {
                     <div className="col-4">
                       <div className="row" style={{ height: "50%" }}>
                         <div className="col">
-                            <div className="onepxborder">
-                          <label for="exampleInputEmail1">
-                            <i class="fas fa-share-alt" /> Share The Game With
-                            Your Friends 🤖:
-                          </label>
-                          <button
-                            type="button"
-                            class="btn btn-info mb-3 adjust"
-                            data-toggle="modal"
-                            data-target="#exampleModalCenter"
-                          >
-                            <i class="fas fa-at mr-1" /> Share By Email
-                          </button>
-</div>
+                          <div className="onepxborder">
+                            <label for="exampleInputEmail1">
+                              <i class="fas fa-share-alt" /> Share The Game With
+                              Your Friends 🤖:
+                            </label>
+                            <button
+                              type="button"
+                              class="btn btn-info mb-3 adjust sendEmailButton"
+                              data-toggle="modal"
+                              data-target="#exampleModalCenter"
+                            >
+                              <i class="fas fa-at mr-1" /> Share By Email
+                            </button>
+                          </div>
                           <div
                             class="modal fade"
                             id="exampleModalCenter"
@@ -374,7 +380,7 @@ class StartGame extends Component {
                                       >
                                         <div class="form-group">
                                           <label for="exampleInputEmail1">
-                                          Your friends email address
+                                            Your friends email address
                                           </label>
                                           <input
                                             onChange={e =>
@@ -419,7 +425,7 @@ class StartGame extends Component {
                               width: "100%",
                               wordBreak: "break-word",
                               resize: "none",
-                              backgroundColor:"rgb(218, 247, 166)"
+                              backgroundColor: "rgb(218, 247, 166)"
                             }}
                             id="blob-path"
                             value={`https://memory-game-fb235.firebaseapp.com/game-custom/${
@@ -435,7 +441,7 @@ class StartGame extends Component {
                               right: "15px"
                             }}
                             for="blob-path"
-                            class="btn btn-outline-primary smallcopy"
+                            class="btn btn-outline-primary smallcopy "
                           >
                             <i class="far fa-copy" />
                             Copy
@@ -444,7 +450,6 @@ class StartGame extends Component {
                       </div>
                       <div style={{ height: "50%" }} className="row">
                         <div className="col">
-
                           <Link
                             to={`/game-custom/${
                               this.props.gameImgsData.gamesize
@@ -460,16 +465,14 @@ class StartGame extends Component {
                               padding: "10px"
                             }}
                           >
-                              <div className="playnow">
-                                PLAY NOW
-                                <i
-                                  class="fas fa-play ml-3 "
-                                  style={{ color: "#6E4A84" }}
-                                />
-                              </div>
+                            <div className="playnow">
+                              PLAY NOW
+                              <i
+                                class="fas fa-play ml-3 "
+                                style={{ color: "#6E4A84" }}
+                              />
+                            </div>
                           </Link>
-
-
                         </div>
                       </div>
                     </div>

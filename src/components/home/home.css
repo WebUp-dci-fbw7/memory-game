@@ -1,93 +1,126 @@
-/* #video-background {
-	/*  making the video fullscreen
-	/* position: fixed;
-	right: 0;
-	bottom: 0;
-	min-width: 100vw;
-	min-height: 100vh;
-	width: 100vw;
-	z-index: -100;
-} */
+.video-container {
+  position: relative;
+  padding-top: 56.25%;
+  /* this gives you responsive aspect ratio */
+  overflow: hidden;
+}
+.hero-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: inline-block;
+}
+/* in this example we are "vertically-centering" the caption */
+.hero-caption {
+  color: white;
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font: 0/0 a;
+}
+.hero-caption:before {
+  content: " ";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.hero-caption-inner {
+  font: 16px/1 Helvetica;
+  /* Reset the font property */
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  width: 100%;
+}
 
 @media (min-width: 0px) and (max-width: 480px) {
-	.disappear {
-		display: none;
-	}
-	.toosmall {
-		background-color: red;
-		border-radius: 45%;
-		padding: 5%;
-		margin: 5vh 5vw;
-		color: black;
-	}
+  .disappear {
+    display: none;
+  }
+  .toosmall {
+    background-color: red;
+    border-radius: 45%;
+    padding: 5%;
+    margin: 5vh 5vw;
+    color: black;
+  }
 }
 
 @media (min-width: 480px) and (max-width: 768px) {
-	.button-style {
-		height: 12vh;
-		width: 80vw;
-		margin: 5vh auto;
-		font-size: 35px;
-		text-align: center;
-		padding: 22px;
-	}
-	.toosmall {
-		display: none;
-	}
-	.m-auto .headline-home {
-		width: 80vw;
-	}
+  .button-style {
+    height: 12vh;
+    width: 80vw;
+    margin: 5vh auto;
+    font-size: 35px;
+    text-align: center;
+    padding: 22px;
+  }
+  .toosmall {
+    display: none;
+  }
+  .m-auto .headline-home {
+    width: 80vw;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 10024px) {
-	.button-style {
-		height: 12vh;
-		width: 60vw;
-		margin: 5vh auto;
-		font-size: 35px;
-		padding: 22px;
-	}
-	.toosmall {
-		display: none;
-	}
+  .button-style {
+    height: 12vh;
+    width: 60vw;
+    margin: 5vh auto;
+    font-size: 35px;
+    padding: 22px;
+  }
+  .toosmall {
+    display: none;
+  }
 }
 
 .btn-primary {
-	color: #fff;
-	background-color: rgba(60, 179, 113, 0.8);
-	border-color: #007bff;
+  color: #fff;
+  background-color: rgba(60, 179, 113, 0.8);
+  border-color: #007bff;
 }
 
 .btn-danger {
-	color: #fff;
-	background-color: rgba(100, 29.8, 48.6, 0.8);
-	border-color: #dc3545;
+  color: #fff;
+  background-color: rgba(100, 29.8, 48.6, 0.8);
+  border-color: #dc3545;
 }
 
 .headline-home {
-	color: rgb(50, 50, 50);
-	background-color: rgba(255, 176, 51, 0.8);
-	border-color: #dc3545;
-	width: 60vw;
-	margin: auto;
-	font-family: 'Fredoka One', cursive;
-	padding-top: 2rem;
+  color: rgb(50, 50, 50);
+  background-color: rgba(255, 176, 51, 0.8);
+  border-color: #dc3545;
+  width: 60vw;
+  margin: auto;
+  font-family: "Fredoka One", cursive;
+  padding-top: 2rem;
 }
 
 .bg-overlay {
-	background: linear-gradient( rgba(119, 119, 119, 0.2), rgba(29.8, 88.6, 100, 0.4), rgba(0, 0, 100, 0.2)), url("../../assets/mem-cards.gif");
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center center;
-	color: #fff;
-	height: 91.5vh;
-	padding-top: 50px;
+  background: linear-gradient(
+      rgba(119, 119, 119, 0.2),
+      rgba(29.8, 88.6, 100, 0.4),
+      rgba(0, 0, 100, 0.2)
+    ),
+    url("../../assets/mem-cards.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  color: #fff;
+  height: 91.5vh;
+  padding-top: 50px;
 }
 
 .text-home {
-	font-size: 1.8rem;
-	padding-top: 1rem;
-	padding-left: 3.3rem;
-	padding-right: 3.3rem;
-	padding-bottom: 2rem;
+  font-size: 1.8rem;
+  padding-top: 1rem;
+  padding-left: 3.3rem;
+  padding-right: 3.3rem;
+  padding-bottom: 2rem;
 }
