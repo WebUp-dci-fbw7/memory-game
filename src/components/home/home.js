@@ -16,7 +16,7 @@ class Home extends Component {
   render() {
     return (
     <Fragment>
-      <div className="m-auto bg-overlay">
+      <div className="m-auto bg-overlay disappear">
         <div class="headline-home mt-5">
             <h1>Create Your Memory Game</h1>
             <p class="text-home">Upload your own images with just a few clicks and invite your friends to play !!!</p>

@@ -348,7 +348,7 @@ class StartGame extends Component {
                                     role="alert"
                                     style={{ marginBottom: "unset" }}
                                   >
-                                    The Email Sent To: {this.state.email}!
+                                    The Email Was Sent To: {this.state.email}!
                                   </div>
                                 ) : (
                                   <Fragment>
@@ -357,7 +357,7 @@ class StartGame extends Component {
                                         class="modal-title"
                                         id="exampleModalCenterTitle"
                                       >
-                                        Share With Friends By Email
+                                        Share it with a friend by Email
                                       </h5>
                                       <button
                                         type="button"
@@ -374,7 +374,7 @@ class StartGame extends Component {
                                       >
                                         <div class="form-group">
                                           <label for="exampleInputEmail1">
-                                            Email address
+                                          Your friends email address
                                           </label>
                                           <input
                                             onChange={e =>
@@ -393,7 +393,7 @@ class StartGame extends Component {
                                             id="emailHelp"
                                             class="form-text text-muted"
                                           >
-                                            please typing a valid email address
+                                            please provide a valid email address
                                           </small>
                                         </div>
                                         <button
@@ -474,7 +474,7 @@ class StartGame extends Component {
               )}
             </Fragment>
           )}
-          <div className="backstyle ">
+          <div className="backstyle mb-5">
             <h1
               style={{
                 padding: "30px"
