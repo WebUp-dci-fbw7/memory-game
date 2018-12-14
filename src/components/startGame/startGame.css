@@ -12,10 +12,20 @@
 	margin-top: 2rem;
 }
 
-.btn-outline-danger {
-	color: #dc3545;
-	background-color: rgba(143, 155, 88, 0.2);
-	border-color: #dc3545;
+.smallcopy {
+	color: #FFF;
+	background-color: #17a2b8;
+	/* border-color: #dc3545; */
+	border-radius: 10%;
+}
+
+.backstyle {
+	background-color: rgb(218, 247, 166);
+}
+
+.onepxborder {
+	border: 1px solid #8C8E90;
+	margin-bottom: 5px;
 }
 
 /* .center-content1 {

@@ -54,7 +54,7 @@ class UploadImageForm extends Component {
                     className="wow bounceIn"
                     style={{
                       width: "100%",
-                      height: "100%",
+                      // height: "100%",
                       borderRadius: "inherit"
                     }}
                     src={item.imgUrl}

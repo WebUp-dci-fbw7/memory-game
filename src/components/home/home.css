@@ -1,3 +1,27 @@
+/* #video-background {
+	/*  making the video fullscreen
+	/* position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100vw;
+	min-height: 100vh;
+	width: 100vw;
+	z-index: -100;
+} */
+
+@media (min-width: 0px) and (max-width: 480px) {
+	.disappear {
+		display: none;
+	}
+	.toosmall {
+		background-color: red;
+		border-radius: 45%;
+		padding: 5%;
+		margin: 5vh 5vw;
+		color: black;
+	}
+}
+
 @media (min-width: 480px) and (max-width: 768px) {
 	.button-style {
 		height: 12vh;
@@ -28,19 +52,6 @@
 	}
 }
 
-@media (min-width: 0px) and (max-width: 480px) {
-	.disappear {
-		display: none;
-	}
-	.toosmall {
-		background-color: red;
-		border-radius: 45%;
-		padding: 5%;
-		margin: 5vh 5vw;
-		color: black;
-	}
-}
-
 .btn-primary {
 	color: #fff;
 	background-color: rgba(60, 179, 113, 0.8);
@@ -60,6 +71,7 @@
 	width: 60vw;
 	margin: auto;
 	font-family: 'Fredoka One', cursive;
+	padding-top: 2rem;
 }
 
 .bg-overlay {
@@ -73,15 +85,9 @@
 }
 
 .text-home {
-	font-size: 2rem;
+	font-size: 1.8rem;
 	padding-top: 1rem;
-}
-
-@media (pointer: coarse) and (hover: none) {
-	header {
-		background: url("https://source.unsplash.com/XT5OInaElMw/1600x900") black no-repeat center center scroll;
-	}
-	header video {
-		display: none;
-	}
+	padding-left: 3.3rem;
+	padding-right: 3.3rem;
+	padding-bottom: 2rem;
 }

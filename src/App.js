@@ -36,7 +36,7 @@ class App extends Component {
         <Fragment className="disappear">
 
         <Navigation />
-        <div className="toosmall center-content">Sorry your display size is not not supported, too small</div>
+        <div className="toosmall d-flex bg-overlay-01 center-content"><span className="m-auto dontshow">Sorry your display size is not supported, too small</span></div>
         <Route
           render={({ location }) => (
             <TransitionGroup>

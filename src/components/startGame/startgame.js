@@ -161,7 +161,7 @@ class StartGame extends Component {
         e.target.files[0].type === "image/jpeg" ||
         e.target.files[0].type === "image/png" ||
         e.target.files[0].type === "image/jpg" ||
-        e.target.files[0].type === "image/svg"
+        e.target.files[0].type === "image/svg+xml"
       ) {
         this.setState({ imgTypeInvalid: false });
         const updateState = {
@@ -255,7 +255,7 @@ class StartGame extends Component {
     ).length;
     const checkArrayLength1 = this.state.imgData.length;
     // console.log(this.state.imgData);
-    let uploadButtonStyle = "btn btn-outline-secondary";
+    let uploadButtonStyle = "btn btn-secondary";
 
     let uploadIconStyleR = "fas fa-arrow-right";
     let uploadIconStyleL = "fas fa-arrow-left";
@@ -284,7 +284,8 @@ class StartGame extends Component {
                   style={{
                     padding: "20px",
                     border: "1px solid #ccc",
-                    borderRadius: "10px"
+                    borderRadius: "10px",
+                    backgroundColor: "rgb(218, 247, 166)",
                   }}
                 >
                   <div className="row">
@@ -314,6 +315,7 @@ class StartGame extends Component {
                     <div className="col-4">
                       <div className="row" style={{ height: "50%" }}>
                         <div className="col">
+                            <div className="onepxborder">
                           <label for="exampleInputEmail1">
                             <i class="fas fa-share-alt" /> Share The Game With
                             Your Friends 🤖:
@@ -326,7 +328,7 @@ class StartGame extends Component {
                           >
                             <i class="fas fa-at mr-1" /> Share By Email
                           </button>
-
+</div>
                           <div
                             class="modal fade"
                             id="exampleModalCenter"
@@ -355,7 +357,7 @@ class StartGame extends Component {
                                         class="modal-title"
                                         id="exampleModalCenterTitle"
                                       >
-                                        Share With Frinds By Email
+                                        Share With Friends By Email
                                       </h5>
                                       <button
                                         type="button"
@@ -416,7 +418,8 @@ class StartGame extends Component {
                               height: "103px",
                               width: "100%",
                               wordBreak: "break-word",
-                              resize: "none"
+                              resize: "none",
+                              backgroundColor:"rgb(218, 247, 166)"
                             }}
                             id="blob-path"
                             value={`https://memory-game-fb235.firebaseapp.com/game-custom/${
@@ -430,7 +433,7 @@ class StartGame extends Component {
                               right: "15px"
                             }}
                             for="blob-path"
-                            class="btn btn-outline-danger "
+                            class="btn btn-outline-primary smallcopy"
                           >
                             <i class="far fa-copy" />
                             Copy
@@ -439,11 +442,12 @@ class StartGame extends Component {
                       </div>
                       <div style={{ height: "50%" }} className="row">
                         <div className="col">
+
                           <Link
                             to={`/game-custom/${this.props.user.username}/${
                               this.props.gameImgsData.user
                             }`}
-                            className="wow zoomIn btn btn-outline-danger btn-lg btn-block adj-link"
+                            className="wow zoomIn btn btn-outline-secondary btn-lg btn-block adj-link"
                             style={{
                               height: "12vh",
                               width: "100%",
@@ -459,8 +463,9 @@ class StartGame extends Component {
                                   style={{ color: "#6E4A84" }}
                                 />
                               </div>
-
                           </Link>
+
+
                         </div>
                       </div>
                     </div>
@@ -469,113 +474,115 @@ class StartGame extends Component {
               )}
             </Fragment>
           )}
-          <h1
-            style={{
-              padding: "30px"
-            }}
-          >
-            Upload Your Custom Images
-          </h1>
-          <h3 className="mb-1 pb-1" style={{ color: "#4DABF4" }}>
-            You can select and upload 3-8 images ;)
-          </h3>
-          <h4 className="mb-1 pb-3" style={{ color: "#FFCA28" }}>
-            the single image size should be 1MB or less <br />
-            the file type should be ( png , jpg, jpeg Or svg)
-          </h4>
-          <button
-            type="button"
-            onClick={this.onClickHandlerMore}
-            class="btn btn-success mr-3"
-            disabled={this.state.imgData.length === 8}
-          >
-            {" "}
-            + more images
-          </button>
-          <button
-            type="button"
-            onClick={this.onClickHandlerLess}
-            class="btn btn-danger"
-            disabled={this.state.imgData.length === 3}
-          >
-            - less images
-          </button>
-          <form
-            onSubmit={this.onSubmitHandler}
-            className="container"
-            style={{
-              marginTop: 25
-            }}
-            encType="multipart/form-data"
-          >
-            {this.state.imgTypeInvalid && (
-              <Fragment>
-                <ReactAudioPlayer src={Spring} autoPlay />
-                <div class="alert alert-danger wow  bounceIn" role="alert">
-                  image file type invalid! select one of those image types
-                  (png,jpg,jpeg,svg)
-                </div>
-              </Fragment>
-            )}
-            {this.state.imgSizeInvalid && (
-              <Fragment>
-                <ReactAudioPlayer src={Spring} autoPlay />
-                <div class="alert alert-danger wow  bounceIn" role="alert">
-                  image size invalid the image size should be less then (1M)
-                </div>
-              </Fragment>
-            )}
-
-            <UploadImageForm
-              onChange={this.onChangeHandler}
-              imgData={this.state.imgData}
-            />
-            {checkArrayLength === this.state.imgData.length && (
-              <i
-                data-wow-duration="5s"
-                class={uploadIconStyleR}
-                style={{
-                  fontSize: "45px",
-                  padding: "0 15px",
-                  color: "blue"
-                }}
-              />
-            )}
-            <button
+          <div className="backstyle ">
+            <h1
               style={{
-                height: "10vh",
-                width: "35vw",
-                margin: "5vh auto",
-                fontSize: "17px",
-                padding: "10px"
+                padding: "30px"
               }}
-              data-wow-duration="3s"
-              className={uploadButtonStyle}
-              disabled={checkArrayLength !== this.state.imgData.length}
-              type="submit"
             >
-              {checkArrayLength !== this.state.imgData.length ? (
-                "Please Select " +
-                (this.state.imgData.length - checkArrayLength) +
-                " Images"
-              ) : (
+              Upload Your Custom Images
+            </h1>
+            <h3 className="mb-1 pb-1" style={{ color: "#4DABF4" }}>
+              You can select and upload 3-8 images ;)
+            </h3>
+            <h4 className="mb-1 pb-3" style={{ color: "#FFCA28" }}>
+              the single image size should be 1MB or less <br />
+              the file type should be ( png , jpg, jpeg Or svg)
+            </h4>
+            <button
+              type="button"
+              onClick={this.onClickHandlerMore}
+              class="btn btn-success mr-3"
+              disabled={this.state.imgData.length === 8}
+            >
+              {" "}
+              + more images
+            </button>
+            <button
+              type="button"
+              onClick={this.onClickHandlerLess}
+              class="btn btn-danger"
+              disabled={this.state.imgData.length === 3}
+            >
+              - less images
+            </button>
+            <form
+              onSubmit={this.onSubmitHandler}
+              className="container"
+              style={{
+                marginTop: 25
+              }}
+              encType="multipart/form-data"
+            >
+              {this.state.imgTypeInvalid && (
                 <Fragment>
-                  <i class="fas fa-upload" /> UPLOAD
+                  <ReactAudioPlayer src={Spring} autoPlay />
+                  <div class="alert alert-danger wow  bounceIn" role="alert">
+                    image file type invalid! select one of those image types
+                    (png,jpg,jpeg,svg)
+                  </div>
                 </Fragment>
               )}
-            </button>
-            {checkArrayLength === this.state.imgData.length && (
-              <i
-                data-wow-duration="5s"
-                class={uploadIconStyleL}
-                style={{
-                  fontSize: "45px",
-                  padding: "0 15px",
-                  color: "blue"
-                }}
+              {this.state.imgSizeInvalid && (
+                <Fragment>
+                  <ReactAudioPlayer src={Spring} autoPlay />
+                  <div class="alert alert-danger wow  bounceIn" role="alert">
+                    image size invalid the image size should be less then (1M)
+                  </div>
+                </Fragment>
+              )}
+
+              <UploadImageForm
+                onChange={this.onChangeHandler}
+                imgData={this.state.imgData}
               />
-            )}
-          </form>
+              {checkArrayLength === this.state.imgData.length && (
+                <i
+                  data-wow-duration="5s"
+                  class={uploadIconStyleR}
+                  style={{
+                    fontSize: "45px",
+                    padding: "0 15px",
+                    color: "blue"
+                  }}
+                />
+              )}
+              <button
+                style={{
+                  height: "10vh",
+                  width: "35vw",
+                  margin: "5vh auto",
+                  fontSize: "17px",
+                  padding: "10px"
+                }}
+                data-wow-duration="3s"
+                className={uploadButtonStyle}
+                disabled={checkArrayLength !== this.state.imgData.length}
+                type="submit"
+              >
+                {checkArrayLength !== this.state.imgData.length ? (
+                  "Please Select " +
+                  (this.state.imgData.length - checkArrayLength) +
+                  " Images"
+                ) : (
+                  <Fragment>
+                    <i class="fas fa-upload" /> UPLOAD
+                  </Fragment>
+                )}
+              </button>
+              {checkArrayLength === this.state.imgData.length && (
+                <i
+                  data-wow-duration="5s"
+                  class={uploadIconStyleL}
+                  style={{
+                    fontSize: "45px",
+                    padding: "0 15px",
+                    color: "blue"
+                  }}
+                />
+              )}
+            </form>
+          </div>
         </div>
       )
     ) : (

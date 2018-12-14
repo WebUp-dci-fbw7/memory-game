@@ -28,12 +28,15 @@
 	.disappear {
 		display: none;
 	}
+	.bg-overlay-01 {
+		background: linear-gradient( rgba(119, 119, 119, 0.2), rgba(29.8, 88.6, 100, 0.4), rgba(0, 0, 100, 0.2)), url("../src/assets/small-display.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center center;
+	}
 	.toosmall {
-		background-color: red;
-		border-radius: 45%;
 		padding: 5%;
 		margin: 5vh 5vw;
-		color: black;
 	}
 	.center-content {
 		margin: 0;

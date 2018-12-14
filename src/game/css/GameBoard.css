@@ -21,11 +21,11 @@
 		display: none;
 	}
 	.toosmall {
-		background-color: red;
+		/* background-color: red; */
 		border-radius: 45%;
 		padding: 5%;
 		margin: 5vh 5vw;
-		color: black;
+		/* color: black; */
 	}
 }
 
