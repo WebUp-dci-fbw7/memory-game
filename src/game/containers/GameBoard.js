@@ -63,23 +63,19 @@ class GameBoard extends Component {
   };
 
   render() {
-    //
+    console.log("WTFFFFFFFFFFFFFFFFFFFFFFFFFFFf", this.props.gameSize); //
     // this.props.gameImgsData.gameImgsData &&  console.log('the new array data', this.props.gameImgsData.gameImgsData.gamesize * 2)
 
     let cardsList = [];
     let initialCards = [];
-    // let cardsItems =
-    //   (this.props.gameImgsData.gameImgsData &&
-    //     this.props.gameImgsData.gameImgsData.imgsGame.length > 16 &&
-    //     this.props.gameImgsData.gameImgsData.gamesize * 2) ||
-    //   16;
+    let cardsItems = (this.props.gameSize && this.props.gameSize * 2) || 16;
     //initial card background
     // let cardsItems =
     //   (this.props.gameImgsData.gameImgsData &&
     //     this.props.gameImgsData.gameImgsData.gamesize * 2) ||
     //   16;
 
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < cardsItems; i++) {
       initialCards.push(
         <div key={i} className="initialCardsWrapper">
           <img

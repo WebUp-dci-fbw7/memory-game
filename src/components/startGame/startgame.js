@@ -420,8 +420,10 @@ class StartGame extends Component {
                             }}
                             id="blob-path"
                             value={`https://memory-game-fb235.firebaseapp.com/game-custom/${
-                              this.props.user.username
-                            }/${this.props.gameImgsData.user}`}
+                              this.props.gameImgsData.gamesize
+                            }/${this.props.user.username}/${
+                              this.props.gameImgsData.user
+                            }`}
                             disabled
                           />
                           <clipboard-copy
@@ -440,7 +442,9 @@ class StartGame extends Component {
                       <div style={{ height: "50%" }} className="row">
                         <div className="col">
                           <Link
-                            to={`/game-custom/${this.props.user.username}/${
+                            to={`/game-custom/${
+                              this.props.gameImgsData.gamesize
+                            }/${this.props.user.username}/${
                               this.props.gameImgsData.user
                             }`}
                             className="wow zoomIn btn btn-outline-danger btn-lg btn-block "

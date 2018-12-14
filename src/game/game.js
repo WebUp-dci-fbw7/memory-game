@@ -44,7 +44,10 @@ class Game extends Component {
         }}
       >
         <ScoreBoard gameId={this.props.match.params.id} />
-        <GameBoard gameId={this.props.match.params.id} />
+        <GameBoard
+          gameId={this.props.match.params.id}
+          gameSize={this.props.match.params.gs}
+        />
       </div>
     );
   }

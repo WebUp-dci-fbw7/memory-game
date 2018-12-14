@@ -47,7 +47,7 @@ class App extends Component {
                     <Route path="/register" exact component={Register} />
                     <Route path="/game" exact component={Game} />
                     <Route
-                      path="/game-custom/:name/:id"
+                      path="/game-custom/:gs/:name/:id"
                       exact
                       component={Game}
                     />

@@ -50,16 +50,18 @@ class UploadImageForm extends Component {
                 }}
               >
                 {item.imgUrl && (
-                  <img
-                    className="wow bounceIn"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      borderRadius: "inherit"
-                    }}
-                    src={item.imgUrl}
-                    alt=""
-                  />
+                  <Fragment>
+                    <img
+                      className="wow bounceIn"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        borderRadius: "inherit"
+                      }}
+                      src={item.imgUrl}
+                      alt=""
+                    />
+                  </Fragment>
                 )}
                 <div class="card-body">
                   <input
